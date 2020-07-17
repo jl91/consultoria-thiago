@@ -1,0 +1,49 @@
+<div style="display: flex; justify-items: center; align-content: center">
+  <div>
+    <app-welcome
+      [name]="name"
+      (changedName)="onChangedName($event)"
+    >
+
+    </app-welcome>
+
+    <mat-divider></mat-divider>
+
+    <label>
+      Name tipo primitivo:
+      <input [(ngModel)]="name" type="text">
+    </label>
+    <mat-divider></mat-divider>
+
+    <p>
+      {{ name }}
+    </p>
+  </div>
+
+  <div>
+    <app-welcome
+      [name]="inputObject.name"
+      (changedName)="onChangedName2($event)"
+      [color]="'warn'"
+      [personObject]="inputObject"
+    >
+
+    </app-welcome>
+
+    <mat-divider></mat-divider>
+
+    <label>
+      Name tipo primitivo:
+      <input [(ngModel)]="inputObject.name"
+             (ngModelChange)="onModelChange($event)"
+             type="text">
+    </label>
+    <mat-divider></mat-divider>
+
+    <p>
+      {{ inputObject.name }}
+    </p>
+  </div>
+</div>
+
+<mat-divider></mat-divider>

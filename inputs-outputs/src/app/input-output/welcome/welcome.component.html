@@ -1,0 +1,14 @@
+<h1>
+  welcome {{ name }}!
+</h1>
+
+<mat-divider></mat-divider>
+
+<button
+  mat-raised-button
+  [color]="color"
+  type="button"
+  (click)="onChangeNameClick($event)"
+>
+  Change name
+</button>
